@@ -18,58 +18,35 @@ const IndexPage = () => {
   `)
   const [formState, setFormState] = useState({
     name: "",
-    state: "",
-    address: "",
-    additionalAddress1: "",
-    additionalAddress2: "",
-    additionalAddress3: "",
-    additionalAddress4: "",
-    additionalAddress5: "",
-    additionalAddress6: "",
-    additionalAddress7: "",
-    additionalAddress8: "",
-    additionalAddress9: "",
-    additionalAddress10: "",
-    existence: "",
-    founder: "",
-    founder1: "",
-    founder2: "",
-    founder3: "",
-    founder4: "",
-    bankruptcies: "",
-    financial: "",
-    license: "",
-    license1: "",
-    license2: "",
-    license3: "",
-    license4: "",
-    license5: "",
-    license6: "",
-    license7: "",
-    license8: "",
-    license9: "",
-    pending: "",
-    online: "",
-    online1: "",
-    online2: "",
-    noreg: "",
-    website: "",
-    linkedin: "",
-    facebook: "",
-    instagram: "",
-    other: "",
-    graduates: "",
-    employerrelationships: "",
-    topemployers: "",
-    partnerorgs: "",
+    title: "",
+    email: "",
+    phoneNumber: "",
+    schoolName: "",
+    newProgramName: "",
+    newProgramDescription: "",
+    newProgramCategory: "",
+    newProgramLength: "",
+    instructionalFormat: "",
+    attendanceFormat: "",
+    tuition: "",
+    costOfLiving: "",
+    firstCohort: "",
+    numberOfCohorts: "",
+    enrollment: "",
+    programOfferedInPast: "",
+    skillsTaught: "",
+    refundPolicy: "",
+    certificateEarned: "",
+    completionPercentage: "",
+    threeMonthEmployed: "",
+    sixMonthEmployed: "",
+    sixMonthSeeking: "",
+    averageStartingSalary: "",
+    careerServices: "",
     certification: "",
   })
 
   const [thankYouMessage, setThankYouMessage] = useState(false)
-  const [moreAddresses, setMoreAddresses] = useState(false)
-  const [founders, setFounders] = useState(false)
-  const [license, setLicense] = useState(false)
-  const [online, setOnline] = useState(false)
 
   const encode = data => {
     const formData = new FormData()
@@ -82,11 +59,6 @@ const IndexPage = () => {
   const handleChange = e => {
     e.preventDefault()
     setFormState({ ...formState, [e.target.name]: e.target.value })
-  }
-
-  const handleAttachment = e => {
-    e.preventDefault()
-    setFormState({ ...formState, [e.target.name]: e.target.files[0] })
   }
 
   const handleSubmit = e => {
@@ -117,66 +89,47 @@ const IndexPage = () => {
       </nav>
 
       <div className="container">
-        <SEO title="New School Diligence" />
+        <SEO title="Academic Program Questionnaire" />
         <form
-          name="new-school-diligence"
+          name="academic-program-questionnaire"
           data-netlify="true"
           netlify-honeypot="bot-field"
           encType="multipart/form-data"
           hidden
         >
           <input type="text" name="name" />
-          <input type="text" name="state" />
-          <textarea name="address" />
-          <textarea name="additionalAddress1" />
-          <textarea name="additionalAddress2" />
-          <textarea name="additionalAddress3" />
-          <textarea name="additionalAddress4" />
-          <textarea name="additionalAddress5" />
-          <textarea name="additionalAddress6" />
-          <textarea name="additionalAddress7" />
-          <textarea name="additionalAddress8" />
-          <textarea name="additionalAddress9" />
-          <textarea name="additionalAddress10" />
-          <input type="text" name="existence" />
-          <textarea name="founder" />
-          <textarea name="founder1" />
-          <textarea name="founder2" />
-          <textarea name="founder3" />
-          <textarea name="founder4" />
-          <textarea name="bankruptcies" />
-          <input type="text" name="financial" />
-          <input type="file" id="file" name="license" />
-          <input type="file" id="file" name="license1" />
-          <input type="file" id="file" name="license2" />
-          <input type="file" id="file" name="license3" />
-          <input type="file" id="file" name="license4" />
-          <input type="file" id="file" name="license5" />
-          <input type="file" id="file" name="license6" />
-          <input type="file" id="file" name="license7" />
-          <input type="file" id="file" name="license8" />
-          <input type="file" id="file" name="license9" />
-          <input type="file" id="pending" name="pending" />
-          <input type="file" name="online" />
-          <input type="file" name="online1" />
-          <input type="file" name="online2" />
-          <textarea name="noreg" />
-          <input type="text" name="website" />
-          <input type="text" name="linkedin" />
-          <input type="text" name="facebook" />
-          <input type="text" name="instagram" />
-          <input type="text" name="other" />
-          <input type="text" name="graduates" />
-          <input type="text" name="employerrelationships" />
-          <textarea name="topemployers" />
-          <textarea name="partnerorgs" />
-          <input type="checkbox" name="certification" />
+          <input type="text" name="title" />
+          <input type="text" name="email" />
+          <input type="text" name="phoneNumber" />
+          <input type="text" name="schoolName" />
+          <input type="text" name="newProgramName" />
+          <textarea name="newProgramDescription" />
+          <input type="text" name="newProgramCategory" />
+          <input type="text" name="newProgramLength" />
+          <input type="text" name="instructionalFormat" />
+          <input type="text" name="attendanceFormat" />
+          <input type="text" name="tuition" />
+          <input type="text" name="costOfLiving" />
+          <input type="text" name="firstCohort" />
+          <input type="text" name="numberOfCohorts" />
+          <input type="text" name="enrollment" />
+          <input type="text" name="programOfferedInPast" />
+          <input type="text" name="skillsTaught" />
+          <input type="text" name="refundPolicy" />
+          <input type="text" name="certificateEarned" />
+          <input type="text" name="completionPercentage" />
+          <input type="text" name="threeMonthEmployed" />
+          <input type="text" name="sixMonthEmployed" />
+          <input type="text" name="sixMonthSeeking" />
+          <input type="text" name="averageStartingSalary" />
+          <textarea name="careerServices" />
+          <input type="text" name="certification" />
         </form>
 
         <div className="form-container">
-          <h1>New School Diligence Questionnaire</h1>
+          <h1>Academic Program Questionnaire</h1>
           <form
-            name="new-school-diligence"
+            name="academic-program-questionnaire"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -186,369 +139,310 @@ const IndexPage = () => {
             <input
               type="hidden"
               name="form-name"
-              value="new-school-diligence"
+              value="academic-program-questionnaire"
             />
-            <p>What is your legal entity name?</p>
+            <p>Your first and last name</p>
             <input
               onChange={handleChange}
               value={formState.name}
               name="name"
               type="text"
               required
-              placeholder="Legal entity name"
+              placeholder="Enter your name"
             />
-            <p>What is your legal state of organization?</p>
+            <p>Your title</p>
             <input
               onChange={handleChange}
-              value={formState.state}
-              name="state"
+              value={formState.title}
+              name="title"
               type="text"
               required
-              placeholder="Legal state of organization"
+              placeholder="Enter your title"
             />
-            <p>What is the address of your headquarters?</p>
+            <p>Your email</p>
+            <input
+              onChange={handleChange}
+              value={formState.email}
+              name="email"
+              type="text"
+              required
+              placeholder="Enter your email"
+            />
+            <p>Your phone number</p>
+            <input
+              onChange={handleChange}
+              value={formState.phoneNumber}
+              name="phoneNumber"
+              type="text"
+              required
+              placeholder="Enter your phone number"
+            />
+            <p>Your school name</p>
+            <input
+              onChange={handleChange}
+              value={formState.schoolName}
+              name="schoolName"
+              type="text"
+              required
+              placeholder="Enter your school name"
+            />
+            <p>Exact program name as it will be listed</p>
+            <input
+              onChange={handleChange}
+              value={formState.newProgramName}
+              name="newProgramName"
+              type="text"
+              required
+              placeholder="Enter the name of your new program"
+            />
+            <p>Program description</p>
             <textarea
               onChange={handleChange}
-              value={formState.address}
-              name="address"
+              value={formState.newProgramDescription}
+              name="newProgramDescription"
               required
-              placeholder="Street Address, City, State, Zip"
+              placeholder="Enter a description of your new program"
             />
-            <p>
-              If you have multiple campus locations, please provide the address
-              for each campus.
-            </p>
-            <button onClick={() => setMoreAddresses(!moreAddresses)}>
-              {moreAddresses ? "Hide Campus Addresses" : "Add Campus Addresses"}
-            </button>
-
-            {moreAddresses && (
-              <>
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress1}
-                  name="additionalAddress1"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress2}
-                  name="additionalAddress2"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress3}
-                  name="additionalAddress3"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress4}
-                  name="additionalAddress4"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress5}
-                  name="additionalAddress5"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress6}
-                  name="additionalAddress6"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress7}
-                  name="additionalAddress7"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress8}
-                  name="additionalAddress8"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress9}
-                  name="additionalAddress9"
-                  placeholder="Street Address, City, State, Zip"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.additionalAddress10}
-                  name="additionalAddress10"
-                  placeholder="Street Address, City, State, Zip"
-                />
-              </>
-            )}
-            <p>How long has your school been in existence (in years)?</p>
+            <p>Program category</p>
+            <select onChange={handleChange}>
+              <option
+                name="Medical/Clinical Training"
+                value="Medical/Clinical Training"
+              >
+                Medical/Clinical Training
+              </option>
+              <option
+                name="Data Science or Analytics"
+                value="Data Science or Analytics"
+              >
+                Data Science or Analytics
+              </option>
+              <option name="Front-End Design" value="Front-End Design">
+                Front-End Design
+              </option>
+              <option
+                name="Full Stack/Software Engineering"
+                value="Full Stack/Software Engineering"
+              >
+                Full Stack/Software Engineering
+              </option>
+              <option name="Marketing/Sales" value="Marketing/Sales">
+                Marketing/Sales
+              </option>
+              <option name="Mobile Development" value="Mobile Development">
+                Mobile Development
+              </option>
+              <option name="Product Management" value="Product Management">
+                Product Management
+              </option>
+              <option name="Project Management" value="Project Management">
+                Project Management
+              </option>
+              <option name="Cybersecurity" value="Cybersecurity">
+                Cybersecurity
+              </option>
+              <option name="UX/UI Design" value="UX/UI Design">
+                UX/UI Design
+              </option>
+              <option name="Other" value="Other">
+                Other
+              </option>
+            </select>
+            <p>Length of program in weeks</p>
             <input
               onChange={handleChange}
-              value={formState.existence}
-              name="existence"
+              value={formState.newProgramLength}
+              name="newProgramLength"
               type="text"
               required
-              placeholder="Length in years"
+              placeholder="Enter the length, in weeks, of your new program"
             />
-            <p>
-              Please provide the names of each founder and executive along with
-              a LinkedIn profile link.
-            </p>
-            <textarea
-              onChange={handleChange}
-              value={formState.founder}
-              name="founder"
-              required
-              placeholder="Founder/executive name and LinkedIn profile link"
-            />
-            <button onClick={() => setFounders(true)}>Add More</button>
-            {founders && (
-              <>
-                <textarea
-                  onChange={handleChange}
-                  value={formState.founder1}
-                  name="founder1"
-                  placeholder="Founder/executive name and LinkedIn profile link"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.founder2}
-                  name="founder2"
-                  placeholder="Founder/executive name and LinkedIn profile link"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.founder3}
-                  name="founder3"
-                  placeholder="Founder/executive name and LinkedIn profile link"
-                />
-                <textarea
-                  onChange={handleChange}
-                  value={formState.founder4}
-                  name="founder4"
-                  placeholder="Founder/executive name and LinkedIn profile link"
-                />
-              </>
-            )}
-            <p>
-              Please describe any bankruptcies, regulatory enforcement actions
-              and former or pending litigation by or against: (1) the school or
-              (2) the leadership team.
-            </p>
-            <textarea
-              onChange={handleChange}
-              value={formState.bankruptcies}
-              name="bankruptcies"
-              required
-              placeholder="Describe..."
-            />
-            <p>
-              Based on your working capital needs and operational costs, are you
-              able to meet current and future financial obligations (rent,
-              salaries, marketing, etc.) for the next 12 months?
-            </p>
+            <p>Instructional format</p>
             <input
               onChange={handleChange}
-              value={formState.financial}
-              name="financial"
+              value={formState.instructionalFormat}
+              name="instructionalFormat"
               type="text"
               required
-              placeholder="Yes/No"
+              placeholder="Online, in-person, hybrid"
             />
-            <p>
-              Please provide a copy of your license or state approval for all
-              states in which you operate at which students receiving Skills
-              Fund financing may attend.
-            </p>
-            <input
-              onChange={handleAttachment}
-              name="license"
-              id="license"
-              type="file"
-            />
-            <button onClick={() => setLicense(true)}>Add More</button>
-            {license && (
-              <>
-                <input
-                  onChange={handleAttachment}
-                  name="license1"
-                  id="license1"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license2"
-                  id="license2"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license3"
-                  id="license3"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license4"
-                  id="license4"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license5"
-                  id="license5"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license6"
-                  id="license6"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license7"
-                  id="license7"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license8"
-                  id="license8"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="license9"
-                  id="license9"
-                  type="file"
-                />
-              </>
-            )}
-            <p>
-              If your application is pending, please provide proof that you are
-              authorized to operate, along with the application submission date
-              and expected approval date.
-            </p>
-            <input
-              onChange={handleAttachment}
-              name="pending"
-              id="pending"
-              type="file"
-            />
-            <p>
-              If you operate online, please provide relevant approval from
-              regulatory agencies.
-            </p>
-            <input
-              onChange={handleAttachment}
-              name="online"
-              id="online"
-              type="file"
-            />
-            <button onClick={() => setOnline(true)}>Add More</button>
-            {online && (
-              <>
-                <input
-                  onChange={handleAttachment}
-                  name="online1"
-                  id="online1"
-                  type="file"
-                />
-                <input
-                  onChange={handleAttachment}
-                  name="online2"
-                  id="online2"
-                  type="file"
-                />
-              </>
-            )}
-            <p>
-              If you are not required to obtain regulatory approval to operate,
-              please explain and provide the basis for your exemption.
-            </p>
-            <textarea
-              onChange={handleChange}
-              value={formState.noreg}
-              name="noreg"
-            />
-            <p>
-              Please provide links to all websites and social media accounts.
-            </p>
+            <p>Attendance format</p>
             <input
               onChange={handleChange}
-              value={formState.website}
-              name="website"
-              required
-              placeholder="Website"
-            />
-            <input
-              onChange={handleChange}
-              value={formState.linkedin}
-              name="linkedin"
-              placeholder="LinkedIn"
-            />
-            <input
-              onChange={handleChange}
-              value={formState.facebook}
-              name="facebook"
-              placeholder="Facebook"
-            />
-            <input
-              onChange={handleChange}
-              value={formState.instagram}
-              name="instagram"
-              placeholder="Instagram"
-            />
-            <input
-              onChange={handleChange}
-              value={formState.other}
-              name="other"
-              placeholder="Other"
-            />
-            <p>
-              Approximately how many different employers have hired your
-              graduates?
-            </p>
-            <input
-              onChange={handleChange}
-              value={formState.graduates}
-              name="graduates"
+              value={formState.attendanceFormat}
+              name="attendanceFormat"
               type="text"
               required
+              placeholder="Full-time, part-time"
             />
             <p>
-              How many employers have formal relationships with your school?
+              Tuition: the full/maximum amount or the estimated monthly tuition
+              based on a student’s standard pace
             </p>
             <input
               onChange={handleChange}
-              value={formState.employerrelationships}
-              name="employerrelationships"
+              value={formState.tuition}
+              name="tuition"
               type="text"
               required
-            />
-            <p>Who are the top employers of your graduates?</p>
-            <textarea
-              onChange={handleChange}
-              value={formState.topemployers}
-              name="topemployers"
-              type="text"
-              required
+              placeholder="Maximum tuition amount"
             />
             <p>
-              Do you partner with any governmental or community organizations?
-              If so, which ones?
+              Cost of living (offered on full-time programs) amount, if any, you
+              would want to offer
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.costOfLiving}
+              name="costOfLiving"
+              type="text"
+              required
+              placeholder="Maximum cost of living amount"
+            />
+            <p>First cohort start date</p>
+            <input
+              onChange={handleChange}
+              value={formState.firstCohort}
+              name="firstCohort"
+              type="text"
+              required
+              placeholder="First cohort start date"
+            />
+            <p>Expected number of cohorts per year</p>
+            <input
+              onChange={handleChange}
+              value={formState.numberOfCohorts}
+              name="numberOfCohorts"
+              type="text"
+              required
+              placeholder="Expected number of cohorts"
+            />
+            <p>Enrollment estimate</p>
+            <input
+              onChange={handleChange}
+              value={formState.enrollment}
+              name="enrollment"
+              type="text"
+              required
+              placeholder="Expected enrollment"
+            />
+            <p>Have you offered this prorgam in the past?</p>
+            <select onChange={handleChange}>
+              <option name="Yes" value="Yes">
+                Yes, we have offered this exact program in the past
+              </option>
+              <option name="Kind of" value="Kind of">
+                Kind of, we have offered this program in a different format
+                (full-time vs part-time, online vs in-person)
+              </option>
+              <option name="No" value="No">
+                No we have never offered this program before
+              </option>
+            </select>
+            <p>
+              What specific skills does the program teach? If applicable, please
+              provide a link outlining the curriculum/syllabus/course outline
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.skillsTaught}
+              name="skillsTaught"
+              type="text"
+              required
+              placeholder="Link to course outline"
+            />
+            <p>What is the program refund policy?</p>
+            <input
+              onChange={handleChange}
+              value={formState.refundPolicy}
+              name="refundPolicy"
+              type="text"
+              required
+              placeholder="Program refund policy"
+            />
+            <p>Please provide us the most updated outcomes information.</p>
+            <p>
+              What percentage of students complete the program within your
+              expected time frame?
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.completionPercentage}
+              name="completionPercentage"
+              type="text"
+              required
+              placeholder="Completion percentage"
+            />
+            <p>
+              What percent of students are employed in a full-time, in-field
+              position 3 months post-completion?
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.threeMonthEmployed}
+              name="threeMonthEmployed"
+              type="text"
+              required
+              placeholder="Percentage employed in-field after 3 months"
+            />
+            <p>
+              What percent of students are employed in a full-time, in-field
+              position 6 months post-completion?
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.sixMonthEmployed}
+              name="sixMonthEmployed"
+              type="text"
+              required
+              placeholder="Percentage employed in-field after 6 months"
+            />
+            <p>
+              What percentage of students are still job-seeking and/or
+              unemployed at 6 months post-completion?
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.sixMonthEmployed}
+              name="sixMonthEmployed"
+              type="text"
+              required
+              placeholder="Percentage still job-seeking after 6 months"
+            />
+            <p>
+              What is the average starting salary after completion of the
+              program?
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.averageStartingSalary}
+              name="averageStartingSalary"
+              type="text"
+              required
+              placeholder="Average starting salary"
+            />
+            <p>
+              What credential or certificate is earned at the end of the
+              program, if any?
+            </p>
+            <input
+              onChange={handleChange}
+              value={formState.certificateEarned}
+              name="certificateEarned"
+              type="text"
+              required
+              placeholder="Credential or certificate earned"
+            />
+            <p>
+              What are some career services you provide for the students who
+              complete this program to help them with job placement?
             </p>
             <textarea
               onChange={handleChange}
-              value={formState.partnerorgs}
-              name="partnerorgs"
+              value={formState.careerServices}
+              name="careerServices"
               required
+              placeholder="Career services offered"
             />
             <p>
               By typing my first and last name, I certify that the above
