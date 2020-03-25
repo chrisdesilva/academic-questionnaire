@@ -104,50 +104,7 @@ const IndexPage = () => {
           <input type="text" name="schoolName" />
           <input type="text" name="newProgramName" />
           <textarea name="newProgramDescription" />
-          <select>
-            <option
-              name="Medical/Clinical Training"
-              value="Medical/Clinical Training"
-            >
-              Medical/Clinical Training
-            </option>
-            <option
-              name="Data Science or Analytics"
-              value="Data Science or Analytics"
-            >
-              Data Science or Analytics
-            </option>
-            <option name="Front-End Design" value="Front-End Design">
-              Front-End Design
-            </option>
-            <option
-              name="Full Stack/Software Engineering"
-              value="Full Stack/Software Engineering"
-            >
-              Full Stack/Software Engineering
-            </option>
-            <option name="Marketing/Sales" value="Marketing/Sales">
-              Marketing/Sales
-            </option>
-            <option name="Mobile Development" value="Mobile Development">
-              Mobile Development
-            </option>
-            <option name="Product Management" value="Product Management">
-              Product Management
-            </option>
-            <option name="Project Management" value="Project Management">
-              Project Management
-            </option>
-            <option name="Cybersecurity" value="Cybersecurity">
-              Cybersecurity
-            </option>
-            <option name="UX/UI Design" value="UX/UI Design">
-              UX/UI Design
-            </option>
-            <option name="Other" value="Other">
-              Other
-            </option>
-          </select>
+          <select name="newProgramCategory" />
           <input type="text" name="newProgramLength" />
           <input type="text" name="instructionalFormat" />
           <input type="text" name="attendanceFormat" />
@@ -156,18 +113,7 @@ const IndexPage = () => {
           <input type="text" name="firstCohort" />
           <input type="text" name="numberOfCohorts" />
           <input type="text" name="enrollment" />
-          <select>
-            <option name="Yes" value="Yes">
-              Yes, we have offered this exact program in the past
-            </option>
-            <option name="Kind of" value="Kind of">
-              Kind of, we have offered this program in a different format
-              (full-time vs part-time, online vs in-person)
-            </option>
-            <option name="No" value="No">
-              No we have never offered this program before
-            </option>
-          </select>
+          <select name="programOfferedInPast" />
           <input type="text" name="skillsTaught" />
           <input type="text" name="refundPolicy" />
           <input type="text" name="certificateEarned" />
@@ -258,49 +204,24 @@ const IndexPage = () => {
               placeholder="Enter a description of your new program"
             />
             <p>Program category</p>
-            <select onChange={handleChange}>
-              <option
-                name="Medical/Clinical Training"
-                value="Medical/Clinical Training"
-              >
+            <select name="newProgramCategory" onChange={handleChange}>
+              <option value="Medical/Clinical Training">
                 Medical/Clinical Training
               </option>
-              <option
-                name="Data Science or Analytics"
-                value="Data Science or Analytics"
-              >
+              <option value="Data Science or Analytics">
                 Data Science or Analytics
               </option>
-              <option name="Front-End Design" value="Front-End Design">
-                Front-End Design
-              </option>
-              <option
-                name="Full Stack/Software Engineering"
-                value="Full Stack/Software Engineering"
-              >
+              <option value="Front-End Design">Front-End Design</option>
+              <option value="Full Stack/Software Engineering">
                 Full Stack/Software Engineering
               </option>
-              <option name="Marketing/Sales" value="Marketing/Sales">
-                Marketing/Sales
-              </option>
-              <option name="Mobile Development" value="Mobile Development">
-                Mobile Development
-              </option>
-              <option name="Product Management" value="Product Management">
-                Product Management
-              </option>
-              <option name="Project Management" value="Project Management">
-                Project Management
-              </option>
-              <option name="Cybersecurity" value="Cybersecurity">
-                Cybersecurity
-              </option>
-              <option name="UX/UI Design" value="UX/UI Design">
-                UX/UI Design
-              </option>
-              <option name="Other" value="Other">
-                Other
-              </option>
+              <option value="Marketing/Sales">Marketing/Sales</option>
+              <option value="Mobile Development">Mobile Development</option>
+              <option value="Product Management">Product Management</option>
+              <option value="Project Management">Project Management</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="UX/UI Design">UX/UI Design</option>
+              <option value="Other">Other</option>
             </select>
             <p>Length of program in weeks</p>
             <input
@@ -381,15 +302,15 @@ const IndexPage = () => {
               placeholder="Expected enrollment"
             />
             <p>Have you offered this prorgam in the past?</p>
-            <select onChange={handleChange}>
-              <option name="Yes" value="Yes">
+            <select name="programOfferedInPast" onChange={handleChange}>
+              <option value="Yes">
                 Yes, we have offered this exact program in the past
               </option>
-              <option name="Kind of" value="Kind of">
+              <option value="Kind of">
                 Kind of, we have offered this program in a different format
                 (full-time vs part-time, online vs in-person)
               </option>
-              <option name="No" value="No">
+              <option value="No">
                 No we have never offered this program before
               </option>
             </select>
@@ -457,8 +378,8 @@ const IndexPage = () => {
             </p>
             <input
               onChange={handleChange}
-              value={formState.sixMonthEmployed}
-              name="sixMonthEmployed"
+              value={formState.sixMonthSeeking}
+              name="sixMonthSeeking"
               type="text"
               required
               placeholder="Percentage still job-seeking after 6 months"
