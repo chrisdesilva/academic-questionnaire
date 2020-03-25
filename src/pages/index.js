@@ -104,7 +104,50 @@ const IndexPage = () => {
           <input type="text" name="schoolName" />
           <input type="text" name="newProgramName" />
           <textarea name="newProgramDescription" />
-          <input type="text" name="newProgramCategory" />
+          <select>
+            <option
+              name="Medical/Clinical Training"
+              value="Medical/Clinical Training"
+            >
+              Medical/Clinical Training
+            </option>
+            <option
+              name="Data Science or Analytics"
+              value="Data Science or Analytics"
+            >
+              Data Science or Analytics
+            </option>
+            <option name="Front-End Design" value="Front-End Design">
+              Front-End Design
+            </option>
+            <option
+              name="Full Stack/Software Engineering"
+              value="Full Stack/Software Engineering"
+            >
+              Full Stack/Software Engineering
+            </option>
+            <option name="Marketing/Sales" value="Marketing/Sales">
+              Marketing/Sales
+            </option>
+            <option name="Mobile Development" value="Mobile Development">
+              Mobile Development
+            </option>
+            <option name="Product Management" value="Product Management">
+              Product Management
+            </option>
+            <option name="Project Management" value="Project Management">
+              Project Management
+            </option>
+            <option name="Cybersecurity" value="Cybersecurity">
+              Cybersecurity
+            </option>
+            <option name="UX/UI Design" value="UX/UI Design">
+              UX/UI Design
+            </option>
+            <option name="Other" value="Other">
+              Other
+            </option>
+          </select>
           <input type="text" name="newProgramLength" />
           <input type="text" name="instructionalFormat" />
           <input type="text" name="attendanceFormat" />
@@ -113,7 +156,18 @@ const IndexPage = () => {
           <input type="text" name="firstCohort" />
           <input type="text" name="numberOfCohorts" />
           <input type="text" name="enrollment" />
-          <input type="text" name="programOfferedInPast" />
+          <select>
+            <option name="Yes" value="Yes">
+              Yes, we have offered this exact program in the past
+            </option>
+            <option name="Kind of" value="Kind of">
+              Kind of, we have offered this program in a different format
+              (full-time vs part-time, online vs in-person)
+            </option>
+            <option name="No" value="No">
+              No we have never offered this program before
+            </option>
+          </select>
           <input type="text" name="skillsTaught" />
           <input type="text" name="refundPolicy" />
           <input type="text" name="certificateEarned" />
