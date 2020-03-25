@@ -205,6 +205,7 @@ const IndexPage = () => {
             />
             <p>Program category</p>
             <select name="newProgramCategory" onChange={handleChange}>
+              <option value="---">---</option>
               <option value="Medical/Clinical Training">
                 Medical/Clinical Training
               </option>
@@ -303,6 +304,7 @@ const IndexPage = () => {
             />
             <p>Have you offered this prorgam in the past?</p>
             <select name="programOfferedInPast" onChange={handleChange}>
+              <option value="---">---</option>
               <option value="Yes">
                 Yes, we have offered this exact program in the past
               </option>
